@@ -1,9 +1,8 @@
+import { Task } from '../task/task'
 import style from './ListTasks.module.css'
 
 export function ListTasks() {
-
   return (
-    
     <section className={style.tasks}>
       <header className={style.header}>
         <div>
@@ -13,24 +12,19 @@ export function ListTasks() {
 
         <div>
           <p className={style.textPurple}>Concluídas</p>
-          <span>
-            0 de 5
-          </span>
+          <span>0 de 5</span>
         </div>
       </header>
 
       <div className={style.list}>
-        Lista de task
+        <Task />
 
-        
-          <section className={style.empty}>
-            
-            <div>
-              <p>Você ainda não tem tarefas cadastradas</p>
-              <span>Crie tarefas e organize seus itens a fazer</span>
-            </div>
-          </section>
-        
+        <section className={style.empty}>
+          <div>
+            <p>Você ainda não tem tarefas cadastradas</p>
+            <span>Crie tarefas e organize seus itens a fazer</span>
+          </div>
+        </section>
       </div>
     </section>
   )
