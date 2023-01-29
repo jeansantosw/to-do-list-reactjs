@@ -1,3 +1,11 @@
+import style from './Header.module.css'
+
+import LogoTodoList from '../../assets/Logo.svg'
+
 export function Header() {
-  return <h1>Hello World</h1>
+  return (
+    <header className={style.header}>
+      <img src={LogoTodoList} alt="Lista de Tarefas" />
+    </header>
+  )
 }

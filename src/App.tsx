@@ -1,5 +1,8 @@
+import { Header } from './components/header/Header'
 import './global.css'
 
 export function App() {
-  return <h1>To-do List</h1>
+  return (
+    <Header />
+  )
 }
