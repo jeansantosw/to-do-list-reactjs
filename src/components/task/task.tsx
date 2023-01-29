@@ -3,7 +3,8 @@ import style from './task.module.css'
 export function Task() {
   return (
     <div className={style.task}>
-      <button>Task completa</button>
+      {/* <button>Task completa</button> */}
+      <input type="checkbox" />
 
       <p className={style.textCompleted}>titulo da task completa</p>
 
