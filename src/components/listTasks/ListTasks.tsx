@@ -3,7 +3,7 @@ import { Task } from '../task/Task'
 import style from './ListTasks.module.css'
 
 interface ListTasksProps {
-  tasks: TasksProps[]
+  tasks: TasksProps[];
 }
 
 export function ListTasks({ tasks }: ListTasksProps) {

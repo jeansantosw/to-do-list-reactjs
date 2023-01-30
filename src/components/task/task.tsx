@@ -11,7 +11,7 @@ export function Task({ task }: TaskProps) {
   return (
     <div className={style.task}>
       {/* <button>Task completa</button> */}
-      {/* <input type="checkbox" /> */}
+      <input type="checkbox" />
       <CheckCircle />
 
       <p className={style.textCompleted}>{task.nameTask}</p>
