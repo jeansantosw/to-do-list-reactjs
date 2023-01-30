@@ -47,3 +47,9 @@ p.textCompleted {
   border: none;
   color: var(--gray-300);
 }
+
+.deleteButton:hover {
+  background: none;
+  border: none;
+  color: var(--pink-300);
+}

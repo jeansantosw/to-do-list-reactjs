@@ -1,3 +1,5 @@
+import { PlusCircle } from 'phosphor-react'
+
 import style from './Header.module.css'
 
 import logoTodoList from '../../assets/Logo.svg'
@@ -7,8 +9,8 @@ export function Header() {
     <header className={style.header}>
       <img src={logoTodoList} alt="Lista de Tarefas" />
       <form className={style.taskForm} action="">
-        <input placeholder='Criar uma nova tarefa' type="text" />
-        <button>Criar</button>
+        <input placeholder="Criar uma nova tarefa" type="text" />
+        <button>Criar {<PlusCircle size={20} />}</button>
       </form>
     </header>
   )
