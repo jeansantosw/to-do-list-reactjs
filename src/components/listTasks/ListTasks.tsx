@@ -1,7 +1,12 @@
-import { Task } from '../task/task'
+import { TasksProps } from '../../App'
+import { Task } from '../task/Task'
 import style from './ListTasks.module.css'
 
-export function ListTasks() {
+interface ListTasksProps {
+  tasks: TasksProps[]
+}
+
+export function ListTasks({ tasks }: ListTasksProps) {
   return (
     <section className={style.tasks}>
       <header className={style.header}>
@@ -17,14 +22,9 @@ export function ListTasks() {
       </header>
 
       <div className={style.list}>
-        <Task />
-
-        <section className={style.empty}>
-          <div>
-            <p>Você ainda não tem tarefas cadastradas</p>
-            <span>Crie tarefas e organize seus itens a fazer</span>
-          </div>
-        </section>
+        {tasks.map(task => {
+         return <Task key={task.nameTask} task={task} />
+        })}
       </div>
     </section>
   )
