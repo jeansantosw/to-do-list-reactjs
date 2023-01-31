@@ -30,16 +30,17 @@ p.textCompleted {
 }
 
 .checkContainer div {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   border-radius: 999px;
-  border: 2px solid var(--blue);
+  border: 1px solid var(--purple-200);
 }
 
-.checkContainer svg {
+.checkCircle {
   width: 100%;
   height: 100%;
-  color: var(--purple);
+  color: var(--purple-800);
+  
 }
 
 .deleteButton {

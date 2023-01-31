@@ -8,19 +8,22 @@ import style from './Header.module.css'
 // Image import
 import logoTodoList from '../../assets/Logo.svg'
 
-export function Header() {
+interface HeaderProps {
+  onAddTask: (taskName: string) => void
+}
+
+export function Header({onAddTask}: HeaderProps) {
   // Status of my application
-  const [task, setTask] = useState(['Estudar reactjs'])
-  const [newTask, setNewTask] = useState('')
+  const [task, setTask] = useState('')
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault()
-    setTask([...task, newTask])
-    setNewTask('')
+    onAddTask(task)
+    setTask('')
   }
 
   function handleChanceValueTask(event: ChangeEvent<HTMLInputElement>) {
-    setNewTask(event.target.value)
+    setTask(event.target.value)
     
   }
 
@@ -30,7 +33,7 @@ export function Header() {
       <form className={style.taskForm} onSubmit={handleCreateNewTask}>
         <input
           onChange={handleChanceValueTask}
-          value={newTask}
+          value={task}
           name="comment"
           placeholder="Criar uma nova tarefa"
         />

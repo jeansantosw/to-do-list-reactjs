@@ -20,17 +20,17 @@
 }
 
 .header p {
-  color: var(--blue);
+  color: var(--blue-800);
   font-size: 0.875rem;
   font-weight: 700;
 }
 
 .header p.textPurple {
-  color: var(--purple);
+  color: var(--blue-800);
 }
 
 .header span {
-  background: var(--gray-400);
+  background: var(--blue-800);
   color: var(--gray-200);
   padding: 3px 9px;
   border-radius: 999px;
@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-.empty svg {
+.empty png {
   opacity: 0.3;
 }
 

@@ -4,19 +4,33 @@ import { TasksProps } from '../../App'
 import style from './task.module.css'
 
 interface TaskProps {
-  task: TasksProps;
+  task: TasksProps
+  onDelete: (taskId: string) => void
+  onComplete: (taskId: string) => void
 }
 
-export function Task({ task }: TaskProps) {
+export function Task({ task, onDelete, onComplete }: TaskProps) {
+  // const isCompleted = true
+
   return (
     <div className={style.task}>
-      {/* <button>Task completa</button> */}
-      <input type="checkbox" />
-      <CheckCircle />
+      <button
+        className={style.checkContainer}
+        onClick={() => onComplete(task.nameTask)}
+      >
+        {task.isCompleted ? (
+          <CheckCircle className={style.checkCircle} />
+        ) : (
+          <div />
+        )}
+      </button>
 
-      <p className={style.textCompleted}>{task.nameTask}</p>
+      <p className={task.isCompleted ? style.textCompleted : ''}>{task.nameTask}</p>
 
-      <button className={style.deleteButton}>
+      <button
+        className={style.deleteButton}
+        onClick={() => onDelete(task.nameTask)}
+      >
         <Trash size={20} />
       </button>
     </div>
